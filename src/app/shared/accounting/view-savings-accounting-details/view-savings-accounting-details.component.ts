@@ -18,11 +18,11 @@ export class ViewSavingsAccountingDetailsComponent implements OnInit {
   }
 
   isCashOrAccrualAccounting(): boolean {
-    return this.accounting.isCashOrAccrualAccounting(this.accountingRule);
+    return this.accountingRule && this.accounting.isCashOrAccrualAccounting(this.accountingRule);
   }
 
   isAccrualAccounting(): boolean {
-    return this.accounting.isAccrualAccounting(this.accountingRule);
+    return this.accountingRule && this.accounting.isAccrualAccounting(this.accountingRule);
   }
 
 }
